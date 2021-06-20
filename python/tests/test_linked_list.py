@@ -1,5 +1,52 @@
-from linked_list.linked_list import LinkedList
+from code_challenges.linked_list.linked_list import LinkedList, Node
 
 
-def test_import():
-    assert LinkedList
+#to test empty Linked List
+def test_one():
+   ll1 = LinkedList()
+   actual = ll1.head
+   expected = None
+   assert actual == expected
+
+def test_two():
+    ll2 = LinkedList()
+    ll2.insert("a")
+    ll2.insert("b")
+    actual = ll2.head.value
+    expected = "b"
+    assert actual == expected
+
+def test_three():
+    node1 = Node("a")
+    ll1 = LinkedList(node1)
+    actual = ll1.head.value
+    excepted = "a"
+    assert actual == excepted
+
+def test_four():
+    ll1 = LinkedList()
+    ll1.insert("a").insert("b").insert("c")
+    actual = ll1.head.value
+    expected = "c"
+    assert actual == expected
+
+def test_five():
+    ll1 = LinkedList()
+    ll1.insert("a").insert("b").insert("c").insert("d")
+    actual = ll1.includes("c")
+    expected = True
+    assert actual == expected
+
+def test_six():
+    ll1 = LinkedList()
+    ll1.insert("a").insert("b").insert("c").insert("d")
+    actual = ll1.includes("x")
+    expected = False
+    assert actual == expected
+
+def test_seven():
+    ll1 = LinkedList()
+    ll1.insert("a").insert("b").insert("c").insert("d")
+    actual = str(ll1)
+    expected = "{'d'} ->{'c'} ->{'b'} ->{'a'} -> None "
+    assert actual == expected
