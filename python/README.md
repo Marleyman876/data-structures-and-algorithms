@@ -8,7 +8,7 @@
 
 4. [Code Challenge #4 Linked List]
 
-5.[Code Challenge #5 Linked List Insertion]
+5.[Code Challenge #5 Linked List Insertion](code_challenges/linked_list/README.md))
 
 *************************************************************
 

@@ -56,3 +56,17 @@ def test_append_to_end():
     actual= new_list.__str__()
     expected = "{'1'} ->{'3'} ->{'2'} ->{'5'} -> None "
     assert actual == expected
+
+def test_insert_before_value():
+    new_list = LinkedList(Node('1',Node('3',Node('2'))))
+    new_list.insert_before_value('3','5')
+    actual = new_list.__str__()
+    expected = "{'1'} ->{'5'} ->{'3'} ->{'2'} -> None "
+    assert actual == expected
+
+def test_insert_after_value():
+    new_list = LinkedList(Node('1',Node('3',Node('2'))))
+    new_list.insert_after_value('3','5')
+    actual = new_list.__str__()
+    expected = "{'1'} ->{'3'} ->{'5'} ->{'2'} -> None "
+    assert actual == expected
