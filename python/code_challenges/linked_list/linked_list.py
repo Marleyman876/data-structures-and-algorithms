@@ -42,10 +42,10 @@ class LinkedList():
         current = self.head
 
         while current is not None:
-            string_value =+ f"{ {current.value} } ->"
+            string_value += f"{ {current.value} } ->"
             current = current.next
 
-        string_value =+ f" None "
+        string_value += f" None "
         return string_value
 
 if __name__ == "__main__":
