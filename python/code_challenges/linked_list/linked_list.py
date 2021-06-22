@@ -48,6 +48,18 @@ class LinkedList():
         string_value += f" None "
         return string_value
 
+    def append_to_end(self,value):
+        new_node = Node(value)
+        if self.head is None:
+            self.head = new_node
+        else:
+            current = self.head
+            while current.next != None:
+                current = current.next
+            current.next = new_node
+
+
+
 if __name__ == "__main__":
 
     ll1 = LinkedList()

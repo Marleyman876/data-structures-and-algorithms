@@ -22,7 +22,6 @@ def test_three():
     actual = ll1.head.value
     excepted = "a"
     assert actual == excepted
-
 def test_four():
     ll1 = LinkedList()
     ll1.insert("a").insert("b").insert("c")
@@ -49,4 +48,11 @@ def test_seven():
     ll1.insert("a").insert("b").insert("c").insert("d")
     actual = str(ll1)
     expected = "{'d'} ->{'c'} ->{'b'} ->{'a'} -> None "
+    assert actual == expected
+
+def test_append_to_end():
+    new_list = LinkedList(Node('1',Node('3',Node('2'))))
+    new_list.append_to_end('5')
+    actual= new_list.__str__()
+    expected = "{'1'} ->{'3'} ->{'2'} ->{'5'} -> None "
     assert actual == expected
