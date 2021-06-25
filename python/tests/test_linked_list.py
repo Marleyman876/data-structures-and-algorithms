@@ -70,3 +70,41 @@ def test_insert_after_value():
     actual = new_list.__str__()
     expected = "{'1'} ->{'3'} ->{'5'} ->{'2'} -> None "
     assert actual == expected
+
+# k is greater than length of list
+
+def test_from_end():
+    new_list = LinkedList(Node(1,Node(3,Node(8, Node(2)))))
+    expected = 2
+    actual = new_list.from_end(0)
+    assert actual == expected
+
+def test_from_end_negative_number():
+    new_list = LinkedList(Node(1,Node(3,Node(8, Node(2)))))
+    expected = "negative Number"
+    actual = new_list.from_end(-1)
+    assert actual == expected
+
+def test_from_end_same_length():
+    new_list = LinkedList(Node(1,Node(3,Node(8, Node(2)))))
+    expected = "Same Length"
+    actual = new_list.from_end(4)
+    assert actual == expected
+
+def test_from_end_out_of_range():
+    new_list = LinkedList(Node(1,Node(3,Node(8, Node(2)))))
+    expected = "Out of Range"
+    actual = new_list.from_end(7)
+    assert actual == expected
+
+def test_from_end_greater_than_1():
+    new_list = LinkedList(Node(1))
+    expected = 1
+    actual = new_list.from_end(0)
+    assert actual == expected
+
+def test_from_end_middle_of_list():
+    new_list = LinkedList(Node(1,Node(3,Node(8, Node(2)))))
+    expected = 3
+    actual = new_list.from_end(2)
+    assert actual == expected
