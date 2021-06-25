@@ -103,7 +103,7 @@ class LinkedList():
         list_head = self.head
         for i in range(1,count - k):
             list_head = list_head.next
-        return list_head.value 
+        return list_head.value
 
 
 if __name__ == "__main__":
