@@ -73,7 +73,7 @@ Current_node = new_node
 
     return new_node
 
-.insertafter(value, newvalue):
+.insertafter(value, newvalue):code challenege 7
 
 def insertafter(self, value, newvalue):
    new_node = Node(value)  # create a new node once we are ready to return the LL
@@ -103,3 +103,48 @@ You have access to the Node class and all the properties on the Linked List clas
 ## Edge Cases
 
 * If list is empty return None
+* number not present in LL
+
+## Visual
+
+ll= [[1][2][3][4][5]], 2
+
+Output = 3
+
+## Big O
+Time <--O(n)
+Space <--O(1)
+
+## Algorithm
+
+Define a function that takes in a LL and a number k.
+If ll is empty return none
+Return the node’s value that is k places from the tail of the linked list.You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+## Code
+
+```py
+Code
+
+def from_end(self, k):
+       list_head = self.head
+       count = 0
+       while list_head != None:
+          list_head = list_head.next
+          count += 1
+       if k > count:
+           return("Out of Range")
+       elif k == count:
+           return("Same Length")
+       elif k < 0:
+           return("negative Number")
+       elif k == self:
+           return("Linked list needs to be greater than 1")
+       list_head = self.head
+       for i in range(1,count - k):
+           list_head = list_head.next
+       return list_head.value
+```
+
+** Got some help from Anthony Beaver [TA] on this challenge
+
