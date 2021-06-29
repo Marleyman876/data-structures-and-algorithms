@@ -1,4 +1,4 @@
-from code_challenges.linked_list.linked_list import LinkedList, Node
+from code_challenges.linked_list.linked_list import LinkedList, Node, zip_two_lists
 
 
 #to test empty Linked List
@@ -108,3 +108,13 @@ def test_from_end_middle_of_list():
     expected = 3
     actual = new_list.from_end(2)
     assert actual == expected
+
+
+def test_zip_two_lists():
+    ll1 = LinkedList()
+    ll2 = LinkedList()
+    ll1.append_to_end("a").append_to_end("c").append_to_end("e")
+    ll2.append_to_end("b").append_to_end("d").append_to_end("f")
+    actual = zip_two_lists(ll1,ll2)
+    expected = "{'a'} ->{'b'} ->{'c'} ->{'d'} ->{'e'} ->{'f'} -> None "
+    assert str(actual) == expected
