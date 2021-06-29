@@ -58,6 +58,7 @@ class LinkedList():
             while current.next != None:
                 current = current.next
             current.next = new_node
+        return self
 
     def insert_before_value(self, target, value):
         node_head = self.head
@@ -106,6 +107,20 @@ class LinkedList():
         return list_head.value
 
 
+def zip_two_lists(list1, list2):
+    current_1 = list1.head
+    current_2 = list2.head
+    while current_1 and current_2:
+        list_1_next = current_1.next
+        list_2_next = current_2.next
+        current_1.next = current_2
+        current_2.next = list_1_next
+        current_1 = list_1_next
+        current_2 = list_2_next
+    list2.head = current_2
+    return list1
+
+
 if __name__ == "__main__":
 
     ll1 = LinkedList()
@@ -113,3 +128,5 @@ if __name__ == "__main__":
 
     result = str(ll1)
     print(result)
+
+
