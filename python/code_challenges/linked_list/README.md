@@ -89,7 +89,7 @@ Current_node.next = new_node
 
 ## Verification
 
-## Challenge #7
+## Challenge #7 [Prabin, Wonwoosen, Glenn]
 
 ### Problem Domian
 
@@ -147,4 +147,63 @@ def from_end(self, k):
 ```
 
 ** Got some help from Anthony Beaver [TA] on this challenge
+
+# Code Challenege #8 [Marie Marcos]
+
+## Problem Domain
+
+> Write a function that takes in two linked lists as arguments, zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list
+
+## Edge Cases
+
+Empty Lists
+different length in linked lists
+
+## Visual
+![![challeneg8](.challenge8.png/)
+
+## Big O
+Time = O(n)
+Space = 0(1)
+
+## Algorithm
+
+Create a function that takes in two linked lists as arguments
+Create two temp variables to represent the head of both lists
+Create while loop to traverse through the linked list
+Check if linked list exists if not - return message "ll does not exist"
+If it does exist set a variable for list 1's next, and list2's next
+Set head1 to point to the head of linked list 2
+Set head of linked list 2 to point to current1.next
+loop until none is reached
+return modified linked list 1
+
+## Psuedo
+
+function zipList takes in linked lists list1 and list2
+set variables for the head nodes of list1 and list2
+while loop for if list1 and list2 exist
+  temp1 = next of list1 head
+  temp2 = next of list2 head
+  next of list1 head assigns to list 2 head
+  next of list2 head assigns to temp1
+  list 1 head assigns to temp1
+  list 2 head assigns to temp2
+list 2 head
+return list1
+
+## Code
+
+def zip_list(list1, list2):
+    current_1 = list1.head
+    current_2 = list2.head
+    while current_1 and current_2:
+        list_1_next = current_1.next
+        list_2_next = current_2.next
+        current_1.next = current_2
+        current_2.next = list_1_next
+        current_1 = list_1_next
+        current_2 = list_2_next
+    list2.head = current_2
+    return list1
 
