@@ -112,6 +112,7 @@ ll= [[1][2][3][4][5]], 2
 Output = 3
 
 ## Big O
+
 Time <--O(n)
 Space <--O(1)
 
@@ -124,7 +125,6 @@ Return the node’s value that is k places from the tail of the linked list.You 
 ## Code
 
 ```py
-Code
 
 def from_end(self, k):
        list_head = self.head
