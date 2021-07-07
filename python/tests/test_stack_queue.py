@@ -1,4 +1,4 @@
-from code_challenges.stack_queue.stack import Stack,Node
+from code_challenges.stack_queue.stack import Stack,Node,Queue
 
 def test_push_stack():
     new_stack = Stack()
@@ -57,4 +57,63 @@ def test_peek():
     new_stack.peek()
     actual = new_stack.top.value
     expected = 1
+    assert actual == expected
+
+#####################################QUEUES#########################################
+
+def test_empty_queue():
+    new_queue = Queue()
+    actual = new_queue.is_Empty()
+    expected = True
+    assert actual == expected
+
+def test_add_que():
+
+        new_que = Queue()
+
+        new_que.enqueue('E')
+        new_que.enqueue('M')
+        new_que.enqueue('B')
+        new_que.enqueue('R')
+        new_que.enqueue('A')
+        new_que.enqueue('C')
+        new_que.enqueue('E')
+        new_que.enqueue('-')
+        new_que.enqueue('T')
+        new_que.enqueue('H')
+        new_que.enqueue('E')
+        new_que.enqueue('-')
+        new_que.enqueue('S')
+        new_que.enqueue('U')
+        new_que.enqueue('C')
+        new_que.enqueue('K')
+
+        actual = new_que.back.value
+        expected  = 'K'
+
+        assert actual == expected
+
+
+def test_deque():
+    new_queue = Queue()
+    new_queue.enqueue('p')
+    new_queue.enqueue('y')
+    new_queue.enqueue('t')
+    new_queue.enqueue('h')
+    new_queue.enqueue('o')
+    new_queue.enqueue('n')
+    actual = new_queue.dequeue()
+    expected = 'y'
+    assert actual == expected
+
+def test_peek():
+    new_queue = Queue()
+    new_queue.enqueue('p')
+    new_queue.enqueue('y')
+    new_queue.enqueue('t')
+    new_queue.enqueue('h')
+    new_queue.enqueue('o')
+    new_queue.enqueue('n')
+    actual = new_queue.peek()
+    expected = 'p'
     assert actual == expected
