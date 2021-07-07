@@ -1,14 +1,16 @@
 # Table of Contents
 
-1. [Code Challenge #1 Reverse Array](code_challenges/array_reverse/README.md)
+1. [Code Challenge Reverse Array](code_challenges/array_reverse/README.md)
 
-2. [Code Challenge #2 Array Shift](code_challenges/array_shift/README.md)
+2. [Code Challenge  Array Shift](code_challenges/array_shift/README.md)
 
-3. [Code Challenge #3 Array BinarySearch](code_challenges/binary_array_search/README.md)
+3. [Code Challenge Array BinarySearch](code_challenges/binary_array_search/README.md)
 
-4. [Code Challenge #4 Linked List]
+4. [Code Challenge Linked List](code_challenges/linked_list/README.md)
 
-5.[Code Challenge #5 Linked List Insertion](code_challenges/linked_list/README.md))
+5.[Code Challenge Linked List Insertion](code_challenges/stacks_queue/README.md)
+
+
 
 *************************************************************
 
