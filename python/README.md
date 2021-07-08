@@ -10,6 +10,7 @@
 
 5.[Code Challenge Linked List Insertion](code_challenges/stacks_queue/README.md)
 
+6[Code Challege Stacks and Queues](code_challenges/stack_queue)
 
 
 *************************************************************

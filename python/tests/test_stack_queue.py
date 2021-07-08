@@ -1,4 +1,5 @@
-from code_challenges.stack_queue.stack import Stack,Node,Queue
+import pytest
+from code_challenges.stack_queue.stack import Stack,Node,Queue,PseuedoQueue
 
 def test_push_stack():
     new_stack = Stack()
@@ -117,3 +118,64 @@ def test_peek():
     actual = new_queue.peek()
     expected = 'p'
     assert actual == expected
+
+
+# Challlenge 11
+
+def test_can_instantiate_a_new_PseuedoQueue_class():
+    new_pseudo = PseuedoQueue()
+    actual_1 = new_pseudo.stack_1.top
+    actual_2 = new_pseudo.stack_2.top
+    expected_1 = None
+    expected_2 = None
+    assert actual_1 == expected_1
+    assert actual_2 == expected_2
+
+
+def test_can_succefully_enqueue_one_value():
+    new_pseudo = PseuedoQueue()
+    new_pseudo.enqueue("a")
+    actual = new_pseudo.stack_1.top.value
+    expected = "a"
+    assert actual == expected
+
+def test_can_succesfully_enqueue_multiple_values(new_pseudo):
+    actual_1 = new_pseudo.stack_1.top.value
+    expected_1 = "d"
+    actual_2 = new_pseudo.stack_1.top.next.value
+    expected_2 = "c"
+    assert actual_1 == expected_1
+    assert actual_2 == expected_2
+
+def test_dequeue_one_node(new_pseudo):
+    actual = new_pseudo.dequeue()
+    expected = "a"
+    assert actual == expected
+
+def test_can_succesfully_dequeue_until_empty(new_pseudo):
+    while not new_pseudo.is_Empty():
+        new_pseudo.dequeue()
+    assert new_pseudo.stack_1.is_Empty()
+
+def test_dequeeing_an_empty_queue_will_raise_exception():
+    empty_pseudo = PseuedoQueue()
+    with pytest.raises(Exception):
+        empty_pseudo.dequeue()
+######################
+# Fixtures
+######################
+@pytest.fixture
+def new_pseudo():
+    new_pseudo = PseuedoQueue()
+    new_pseudo.enqueue("a")
+    new_pseudo.enqueue("b")
+    new_pseudo.enqueue("c")
+    new_pseudo.enqueue("d")
+    return new_pseudo
+@pytest.fixture(autouse=True)
+def clean():
+    """runs before each test automatically
+    There's also a more advanced way to run code after each test as well
+    Check the docs for that. Hint: it uses yield
+    """
+    new_pseudo = None

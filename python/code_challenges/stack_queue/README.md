@@ -58,17 +58,39 @@
 
 ## Write tests to prove the following functionality:
 
-1. Can successfully push onto a stack
-2. Can successfully push multiple values onto a stack
-3. Can successfully pop off the stack
-4. Can successfully empty a stack after multiple pops
-5. Can successfully peek the next item on the stack
-6. Can successfully instantiate an empty stack
-7. Calling pop or peek on empty stack raises exception
-8. Can successfully enqueue into a queue
-9. Can successfully enqueue multiple values into a queue
-10. Can successfully dequeue out of a queue the expected value
-11. Can successfully peek into a queue, seeing the expected value
-12. Can successfully empty a queue after multiple dequeues
-13. Can successfully instantiate an empty queue
-14. Calling dequeue or peek on empty queue raises exception
+[x] Can successfully push onto a stack
+[x] Can successfully push multiple values onto a stack
+[x] Can successfully pop off the stack
+[x] Can successfully empty a stack after multiple pops
+[x] Can successfully peek the next item on the stack
+[x] Can successfully instantiate an empty stack
+[x] Calling pop or peek on empty stack raises exception
+[x] Can successfully enqueue into a queue
+[x] Can successfully enqueue multiple values into a queue
+[x] Can successfully dequeue out of a queue the expected value
+[x] Can successfully peek into a queue, seeing the expected value
+[x] Can successfully empty a queue after multiple dequeues
+[x] Can successfully instantiate an empty queue
+[x] Calling dequeue or peek on empty queue raises exception
+
+<!-- ####################Code Challenge 11############## -->
+
+## Stacks Queue Psuedo [Collaboraed with Wondwosen]
+
+* Create a new class called pseudo queue
+* Do not use an existing Queue.
+* Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below),
+
+* Internally, utilize 2 Stack instances to create and manage the queue
+
+## Methods
+
+* enqueue
+Arguments: value
+Inserts value into the PseudoQueue, using a first-in, first-out approach.
+
+* dequeue
+Arguments: none
+Extracts a value from the PseudoQueue, using a first-in, first-out approach.
+
+[White Board](code_challenges/stack_queue/stack-queue-pseudo.jpg)
