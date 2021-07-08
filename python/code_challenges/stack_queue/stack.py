@@ -74,3 +74,32 @@ class Queue:
         if self.is_Empty():
             raise Exception('Peeking from an empty queue')
         return self.front.value
+
+
+#Challenge 11
+
+class PseuedoQueue:
+    def __init__(self):
+        self.stack_1 = Stack()
+        self.stack_2 = Stack()
+
+    def enqueue(self, value):
+        self.stack_1.push(value)
+
+
+    def dequeue(self):
+        if self.stack_1.is_Empty():
+            raise Exception("PseudoQueue is empty")
+        while not self.stack_1.is_Empty():
+            temp = self.stack_1.pop()
+            self.stack_2.push(temp)
+        dequed = self.stack_2.pop()
+        while not self.stack_2.is_Empty():
+            popped = self.stack_2.pop()
+            self.stack_1.push(popped)
+        return dequed
+
+    def is_Empty(self):
+        return self.stack_1.is_Empty()
+if __name__ == "__main__":
+    pass
