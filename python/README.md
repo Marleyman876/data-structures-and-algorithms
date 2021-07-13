@@ -12,6 +12,7 @@
 
 6[Code Challege Stacks and Queues](code_challenges/stack_queue)
 
+7.[Code challenge animal shelter](/Users/garfieldgrant/code_Fellows/code-challenges/data-structures-and-algorithms/python/code_challenges/algorithm/README.md)
 
 *************************************************************
 
