@@ -21,9 +21,12 @@ Return: either a dog or a cat, based on preference.
 If pref is not "dog" or "cat" then return n
 
 ## Edge Cases
-if dequeue prefered is not d0g
-## Input/Output
 
-Input: queue of cats and dogs
-Output: whatever animal is pref
+if dequeue prefered is not dog or cat raise exception
+if enqueue is not dog or cat raise none
+cannot deques from empty queue
+
+## Visual
+
+[Visual](/Users/garfieldgrant/code_Fellows/code-challenges/data-structures-and-algorithms/python/code_challenges/algorithm/animal_queue.jpg)
 
