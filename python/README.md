@@ -10,9 +10,11 @@
 
 5.[Code Challenge Linked List Insertion](code_challenges/stacks_queue/README.md)
 
-6[Code Challege Stacks and Queues](code_challenges/stack_queue)
+6[Code Challege Stacks and Queues](code_challenges/stack_queue/README.md)
 
-7.[Code challenge animal shelter](/Users/garfieldgrant/code_Fellows/code-challenges/data-structures-and-algorithms/python/code_challenges/algorithm/README.md)
+7.[Code Challenge Animal Shelter](code_challenges/algorithm/README.md)
+
+8.[Code Challenge Brackets Validation](code_challenges/stack_queues_brackets/README.md)
 
 *************************************************************
 
