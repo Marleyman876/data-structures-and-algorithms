@@ -61,4 +61,4 @@ def Brackets(string):
 
 ```
 
-## [White Board]()
+## [White Board](code_challenges/stack_queues_brackets/WhiteBoard.png)
