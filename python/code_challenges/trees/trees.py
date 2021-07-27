@@ -52,6 +52,7 @@ class BinaryTree:
             return 'Tree is empty'
 
         tree_post_order = []
+
         def traverse_post_order(root):
 
             if root.left != None:
@@ -65,6 +66,21 @@ class BinaryTree:
         traverse_post_order(self.root)
 
         return tree_post_order
+
+    #****************************Code challenege 16**********************************
+
+    def find_max_value(self):
+        if (self.root == None):
+            return 'root value cannot be empty'
+
+        all_values = self.post_order()
+        max_value = all_values[0]
+
+        for i in all_values:
+            if i > max_value:
+                max_value = i
+
+        return max_value
 
 
 
@@ -111,3 +127,6 @@ class BinarySearchTree(BinaryTree):
                 return True
             else:
                 return False
+
+
+
