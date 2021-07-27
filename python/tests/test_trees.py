@@ -1,6 +1,7 @@
 import pytest
 from code_challenges.trees.trees import Node, BinaryTree, BinarySearchTree
 
+
 #****************************************************************Binary Tree Tests********************************************************************
 #@pytest.mark.skip("pending")
 def test_node_has_value():
@@ -96,6 +97,24 @@ def test_add_non_int_node():
   assert actual == expected
 
 
+ #****************************Code challenege 16**********************************
+
+def test_max_value(binary_tree_int):
+    actual = binary_tree_int.find_max_value()
+    expected = 25
+    assert actual == expected
+
+def test_max_value(empty_tree):
+    actual = empty_tree.find_max_value()
+    expected = 'root value cannot be empty'
+    assert actual == expected
+
+def test_max_value_fail(binary_tree_int):
+    actual = binary_tree_int.find_max_value()
+    expected = 13
+    assert actual != expected
+
+
 @pytest.fixture
 def empty_tree():
     empty_tree = BinaryTree()
@@ -115,3 +134,15 @@ def binary_tree():
     return tree
 
 
+@pytest.fixture
+def binary_tree_int():
+    tree = BinaryTree()
+    tree.root = Node(1)
+    tree.root.left = Node(5)
+    tree.root.right = Node(10)
+    tree.root.left.right = Node(25)
+    tree.root.left.right.left = Node(13)
+    tree.root.left.right.right = Node(15)
+    tree.root.right.right = Node(9)
+    tree.root.right.right.left = Node(4)
+    return tree
