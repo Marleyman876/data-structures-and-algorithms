@@ -1,3 +1,8 @@
+
+from code_challenges.stack_queue.stack import Queue, Node
+
+
+
 class Node:
     def __init__(self, key):
         self.left = None
@@ -81,6 +86,30 @@ class BinaryTree:
                 max_value = i
 
         return max_value
+
+#****************************Code challenege 17**********************************
+
+    # def breadth_first(self):
+    #     root = self.root
+
+    #     if root is None:
+    #       return 'Tree is empty'
+    #     else:
+    #         list = []
+    #         queue = Queue() #queue() is imported from my stack method folder
+    #         queue.enqueue(root)
+
+    #     while not queue.is_Empty():
+    #         front = queue.dequeue()
+    #         list.append(front.value)
+
+    #         if front.left:
+    #             queue.enqueue(front.left)
+    #         if front.right:
+    #           queue.enqueue(front.right)
+
+    #     return list
+
 
 
 
