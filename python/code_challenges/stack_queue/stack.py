@@ -65,8 +65,7 @@ class Queue:
         if self.is_Empty():
             raise Exception('You cannot deque from an empty queue')
         temp = self.front
-        temp = self.front.next
-        temp.next = None
+        self.front = temp.next
         return temp.value
 
 

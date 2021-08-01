@@ -104,7 +104,7 @@ def test_deque():
     new_queue.enqueue('o')
     new_queue.enqueue('n')
     actual = new_queue.dequeue()
-    expected = 'y'
+    expected = 'p'
     assert actual == expected
 
 def test_peek():

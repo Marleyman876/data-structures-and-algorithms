@@ -1,6 +1,8 @@
 import pytest
-from code_challenges.trees.trees import Node, BinaryTree, BinarySearchTree
 
+from code_challenges.stack_queue.stack import Queue
+
+from code_challenges.trees.trees import Node, BinaryTree, BinarySearchTree
 
 #****************************************************************Binary Tree Tests********************************************************************
 #@pytest.mark.skip("pending")
@@ -115,6 +117,24 @@ def test_max_value_fail(binary_tree_int):
     assert actual != expected
 
 
+ #****************************Code challenege 17**********************************
+
+def test_breadth_empty(empty_tree):
+    actual = empty_tree.breadth_first()
+    expected = 'Tree is empty'
+    assert actual == expected
+
+def test_breadth_negative(negative_tree):
+    actual = negative_tree.breadth_first()
+    expected = [-2, -7, -5, -2, -6, -9, -5, -11, -4]
+    assert actual == expected
+
+def test_breadth_positive(binary_tree_int):
+    actual = binary_tree_int.breadth_first()
+    expected = [1, 5, 10, 25, 9, 13, 15, 4]
+    assert actual == expected
+
+
 @pytest.fixture
 def empty_tree():
     empty_tree = BinaryTree()
@@ -146,3 +166,19 @@ def binary_tree_int():
     tree.root.right.right = Node(9)
     tree.root.right.right.left = Node(4)
     return tree
+
+@pytest.fixture
+def negative_tree():
+  # testing a tree with all negative numbers
+  tree = BinaryTree()
+  tree.root = Node(-2)
+  tree.root.left = Node(-7)
+  tree.root.left.left = Node(-2)
+  tree.root.left.right = Node(-6)
+  tree.root.left.right.left = Node(-5)
+  tree.root.left.right.right = Node(-11)
+  tree.root.right = Node(-5)
+  tree.root.right.right = Node(-9)
+  tree.root.right.right.left = Node(-4)
+  return tree
+
