@@ -2,8 +2,6 @@ import pytest
 
 from code_challenges.stack_queue.stack import Queue
 
-from code_challenges.breadth_tree.breadth import breadth_first
-
 from code_challenges.trees.trees import Node, BinaryTree, BinarySearchTree
 
 #****************************************************************Binary Tree Tests********************************************************************
@@ -121,11 +119,20 @@ def test_max_value_fail(binary_tree_int):
 
  #****************************Code challenege 17**********************************
 
-def test_breadth_empty():
+def test_breadth_empty(empty_tree):
     actual = empty_tree.breadth_first()
     expected = 'Tree is empty'
     assert actual == expected
 
+def test_breadth_negative(negative_tree):
+    actual = negative_tree.breadth_first()
+    expected = [-2, -7, -5, -2, -6, -9, -5, -11, -4]
+    assert actual == expected
+
+def test_breadth_positive(binary_tree_int):
+    actual = binary_tree_int.breadth_first()
+    expected = [1, 5, 10, 25, 9, 13, 15, 4]
+    assert actual == expected
 
 
 @pytest.fixture

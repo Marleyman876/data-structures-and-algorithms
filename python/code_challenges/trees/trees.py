@@ -87,28 +87,28 @@ class BinaryTree:
 
         return max_value
 
-#****************************Code challenege 17**********************************
+# ****************************Code challenege 17**********************************
 
-    # def breadth_first(self):
-    #     root = self.root
+    def breadth_first(self):
+        root = self.root
 
-    #     if root is None:
-    #       return 'Tree is empty'
-    #     else:
-    #         list = []
-    #         queue = Queue() #queue() is imported from my stack method folder
-    #         queue.enqueue(root)
+        if root is None:
+          return 'Tree is empty'
+        else:
+            list = []
+            queue = Queue() #queue() is imported from my stack method folder
+            queue.enqueue(root)
 
-    #     while not queue.is_Empty():
-    #         front = queue.dequeue()
-    #         list.append(front.value)
+        while not queue.is_Empty():
+            front = queue.dequeue()
+            list.append(front.value)
 
-    #         if front.left:
-    #             queue.enqueue(front.left)
-    #         if front.right:
-    #           queue.enqueue(front.right)
+            if front.left:
+                queue.enqueue(front.left)
+            if front.right:
+              queue.enqueue(front.right)
 
-    #     return list
+        return list
 
 
 
