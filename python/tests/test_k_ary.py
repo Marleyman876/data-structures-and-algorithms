@@ -8,10 +8,6 @@ def test_can_instantiate_kary_node():
     assert node.value == 3
     assert node.children == []
 
-# def empty_tree():
-#     empty_tree = new_tree()
-#     return empty_tree
-
 def test_can_instantiate_empty_kary_tree():
     new_kary = KaryTree()
     assert new_kary.root == None
