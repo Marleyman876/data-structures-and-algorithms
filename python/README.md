@@ -16,6 +16,8 @@
 
 8.[Code Challenge Brackets Validation](code_challenges/stack_queues_brackets/README.md)
 
+9.[Trees](code_challenges/trees/README.md)
+
 *************************************************************
 
 ## Data Structures and Algorithms
