@@ -16,6 +16,15 @@ def test_two():
     expected = "b"
     assert actual == expected
 
+def test_special_character():
+    ll_spec = LinkedList()
+    ll_spec.insert('!')
+    ll_spec.insert('@')
+    actual = ll_spec.head.value
+    expected = '@'
+    assert actual == expected
+
+
 def test_three():
     node1 = Node("a")
     ll1 = LinkedList(node1)
