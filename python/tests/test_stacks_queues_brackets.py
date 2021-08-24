@@ -3,7 +3,7 @@ from code_challenges.stack_queues_brackets.stack_queues_brackets import Brackets
 
 
 def test_brackets():
-    string = "{Hello, World}[}"
+    string = "{Hello, World}"
     Brackets(string)
     actual = False
     expected = False
